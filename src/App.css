@@ -20,3 +20,46 @@
 .App-link {
   color: #09d3ac;
 }
+
+.paragraph {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.teammembers {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#customers {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ffffff;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #282c34;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #282c34;
+  color: white;
+}
