@@ -5,6 +5,7 @@ import Home from './components/home/home';
 import Product from './components/product/product'
 import * as serviceWorker from './serviceWorker';
 import { Router, Route, browserHistory, IndexRoute } from "react-router";
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 ReactDOM.render(
     <Router history={browserHistory}>

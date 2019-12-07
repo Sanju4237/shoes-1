@@ -27,6 +27,7 @@ function Home() {
           </table>
         </div>
         <p><Link to={"/product"}>PRODUCT PAGE</Link></p>
+        <p><Link to={"/pagination"}>PAGINATION</Link></p>
       </header>
     </div>
   );
