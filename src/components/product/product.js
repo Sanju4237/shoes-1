@@ -72,7 +72,7 @@ const Product = () => {
                     })}
                 </tbody>
             </Table>
-            <Pagination productPerPage={productPerPage} totalProduct={data.length} paginate={paginate} />
+            <Pagination productPerPage={productPerPage} totalProduct={data.length} paginate={paginate} isActive={currentPage} />
             <Link to={"/"}>Home</Link>
         </div>
     )
