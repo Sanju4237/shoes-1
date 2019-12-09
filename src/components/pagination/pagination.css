@@ -16,6 +16,7 @@
     border-radius: 2px;
     margin: 0 2px;
     cursor: pointer;
+    font-size: 12px;
 }
 
 .page-item:hover {

@@ -7,6 +7,7 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    font-size: 14px;
 }
 
 .productContainer h1 {
@@ -17,4 +18,8 @@
     background-color: #007bff;
     border-color: #007bff;
     color: #ffffff;
+}
+
+.searchInput {
+    display: flex;
 }

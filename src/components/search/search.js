@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { Link } from "react-router";
-import './product.css';
+import './search.css';
 import Table from 'react-bootstrap/Table';
 import ProductData from '../../data/product.json';
 import Pagination from '../pagination/pagination';
 
-const Product = () => {
+const Search = () => {
     const data = ProductData.items;
     const [currentPage, setCurrentPage] = useState(1);
-    const [productPerPage] = useState(10);
+    const [productPerPage] = useState(15);
     const [searchValue, setSearchValue] = useState('');
 
     //Get current product
@@ -21,6 +20,7 @@ const Product = () => {
 
     function searchingFor(term) {
         return function(data) {
+            console.log("x", data);
             return data.sku.toLowerCase().includes(term.toLowerCase()) || data.price.toLowerCase().includes(term.toLowerCase()) || 
             data.brand.toLowerCase().includes(term.toLowerCase()) || data.description.toLowerCase().includes(term.toLowerCase()) || 
             data.long_description.toLowerCase().includes(term.toLowerCase()) || data.size.toLowerCase().includes(term.toLowerCase()) || 
@@ -29,8 +29,7 @@ const Product = () => {
     }
 
     return (
-        <div className="productContainer">
-            <h1>Product Page Of Shoes Smart Container</h1>
+        <div>
             <p>You are searching for {searchValue}</p>
             <input type="text" onChange={(event) => setSearchValue(event.target.value)} />
             <Table responsive striped bordered hover variant="dark">
@@ -85,9 +84,8 @@ const Product = () => {
                 </tbody>
             </Table>
             {searchValue ? '' : <Pagination productPerPage={productPerPage} totalProduct={data.length} paginate={paginate} /> }
-            <Link to={"/"}>Home</Link>
         </div>
     )
 }
 
-export default Product;
+export default Search;

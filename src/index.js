@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Home from './components/home/home';
 import Product from './components/product/product'
+import Search from './components/search/search';
 import * as serviceWorker from './serviceWorker';
 import { Router, Route, browserHistory, IndexRoute } from "react-router";
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -13,6 +14,7 @@ ReactDOM.render(
             <IndexRoute component={Home} />
         </Route>
         <Route path="product" component={Product} />
+        {/* <Route path="search" component={Search} /> */}
     </Router>, 
     document.getElementById('root'));
 
