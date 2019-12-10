@@ -8,7 +8,7 @@ import Pagination from '../pagination/pagination';
 const Product = () => {
     const data = ProductData.items;
     const [currentPage, setCurrentPage] = useState(1);
-    const [productPerPage] = useState(10);
+    const [productPerPage] = useState(15);
     const [searchValue, setSearchValue] = useState('');
 
     //Get current product
