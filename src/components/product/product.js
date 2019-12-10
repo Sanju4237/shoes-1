@@ -32,7 +32,7 @@ const Product = () => {
         <div className="productContainer">
             <h1>Product Page Of Shoes Smart Container</h1>
             <p>You are searching for {searchValue}</p>
-            <input type="text" onChange={(event) => setSearchValue(event.target.value)} />
+            <input type="text" className="input" onChange={(event) => setSearchValue(event.target.value)} />
             <Table responsive striped bordered hover variant="dark">
                 <thead>
                     <tr>
@@ -48,7 +48,7 @@ const Product = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {currentProducts.filter(searchingFor(searchValue)).map((d, i) => {
+                    { currentProducts.length > 0 ? currentProducts.filter(searchingFor(searchValue)).map((d, i) => {
                         const pages = Math.ceil((currentPage * productPerPage) + (i+1) - productPerPage);
                         return (
                             <tr key={i}>
@@ -81,7 +81,11 @@ const Product = () => {
                                 </td>
                             </tr>
                         )                             
-                    })}
+                    }) : 
+                    <div>
+                        <p>No Records Found...</p>
+                    </div>
+                  }
                 </tbody>
             </Table>
             {searchValue ? '' : <Pagination productPerPage={productPerPage} totalProduct={data.length} paginate={paginate} /> }
